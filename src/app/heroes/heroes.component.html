@@ -1,3 +1,4 @@
+<!-- List of heroes. -->
 <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes"
@@ -7,22 +8,4 @@
   </li>
 </ul>
 
-
-<div *ngIf="selectedHero">
-  <div>
-    <label>
-      name: <input [(ngModel)]="selectedHero.name" placeholder="name">
-      machine_name: <input [(ngModel)]="selectedHero.machine_name" placeholder="name">
-    </label>
-  </div>
-
-  <h2>{{ selectedHero.name|uppercase }} Details</h2>
-  <div><span>id: </span>{{selectedHero.id}}</div>
-  <div><span>name: </span>{{selectedHero.name}}</div>
-  <div><span>name: </span>{{selectedHero.machine_name}}</div>
-  <div><span>weapons: </span>{{selectedHero.weapons}}</div>
-  <ul *ngFor="let weapon of selectedHero.weapons">
-    <li>{{ weapon }}</li>
-  </ul>
-
-</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
