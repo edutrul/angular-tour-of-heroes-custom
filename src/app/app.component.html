@@ -3,5 +3,13 @@
   <h1> {{ title }}!</h1>
 </div>
 
-<app-heroes></app-heroes>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+
+<!-- makes available content of route pages -->
+<router-outlet></router-outlet>
+
+<!-- app-component makes available display always your app component template here -->
 <app-messages></app-messages>
